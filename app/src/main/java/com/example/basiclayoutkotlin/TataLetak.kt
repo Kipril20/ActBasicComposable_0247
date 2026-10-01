@@ -130,5 +130,6 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
             Image(painter = gambar,
                 contentDescription = null,
                 contentScale = ContentScale.Fit)
+            Text()
         }
 }
