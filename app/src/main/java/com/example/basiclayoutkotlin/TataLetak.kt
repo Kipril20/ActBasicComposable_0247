@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -44,14 +45,17 @@ fun TataletakRow(modifier: Modifier) {
 }
 
 @Composable
-fun TataletakBox(modifier: Modifier) {
-    Box(modifier = modifier.fillMaxHeight().fillMaxWidth(),
-        contentAlignment = Alignment.Center) {
-        Text(text = "Box 1")
-        Text(text = "Column 1")
-        Text(text = "Row 1")
-        Text(text = "Box 2")
-        Text(text = "Box 3")
+fun TataletakBox(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxHeight()
+            .fillMaxWidth()
+    ) {
+        Text(text = "Box 1", modifier = Modifier.align(Alignment.TopStart))
+        Text(text = "Column 1", modifier = Modifier.align(Alignment.TopEnd))
+        Text(text = "Row 1", modifier = Modifier.align(Alignment.Center))
+        Text(text = "Box 2", modifier = Modifier.align(Alignment.BottomStart))
+        Text(text = "Column 2", modifier = Modifier.align(Alignment.BottomEnd))
     }
 }
 
@@ -94,28 +98,31 @@ fun TataletakRowColumn(modifier: Modifier) {
 
 @Composable
 fun TataletakBoxColumnRow(modifier: Modifier) {
-    val gambar = painterResource(id = R.drawable.notasinaton)
+    val gambar = painterResource(id = R.drawable.notasibalok)
     Column {
         Box(
-            modifier = modifier.fillMaxWidth().height(150.dp).background(color = Color.Yellow),
+            modifier = modifier
+                .fillMaxWidth()
+                .height(110.dp)
+                .background(color = Color.Yellow),
             contentAlignment = Alignment.Center
         ) {
-            Column {
+            Column() {
                 Row(
                     modifier = modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    Text(text = "Col1 Row1 Komponen1")
-                    Text(text = "Col1 Row1 Komponen2")
-                    Text(text = "Col1 Row1 Komponen3")
+                    Text(text = "Col1_Row1_Komponen1")
+                    Text(text = "Col1_Row1_Komponen2")
+                    Text(text = "Col1_Row1_Komponen3")
                 }
                 Row(
                     modifier = modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    Text(text = "Col1 Row2 Komponen1")
-                    Text(text = "Col1 Row2 Komponen2")
-                    Text(text = "Col1 Row2 Komponen3")
+                    Text(text = "Col1_Row2_Komponen1")
+                    Text(text = "Col1_Row2_Komponen2")
+                    Text(text = "Col1_Row2_Komponen3")
                 }
             }
         }
@@ -126,20 +133,18 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
                 .height(height = 300.dp)
                 .background(color = Color.Cyan),
             contentAlignment = Alignment.Center
-        ) {
-            Image(
-                painter = gambar,
+        ){
+            Image(painter = gambar,
                 contentDescription = null,
-                contentScale = ContentScale.Fit
-            )
-            Text(
-                text = "My Music",
+                contentScale = ContentScale.Fit)
+            Text(text = "My Music",
                 fontSize = 50.sp,
                 color = Color.Red,
                 fontWeight = FontWeight.Bold,
                 fontFamily = FontFamily.Cursive,
                 modifier = Modifier.align(
-                    alignment = Alignment.Center))
+                    alignment = Alignment.Center)
+            )
         }
     }
 }
