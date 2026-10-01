@@ -91,3 +91,11 @@ fun TataletakRowColumn(modifier: Modifier) {
         }
     }
 }
+
+@Composable
+fun TataletakBoxColumnRow(modifier: Modifier) {
+    val gambar = painterResource(id = R.drawable.notasinaton)
+    Column {
+        Box(modifier = modifier.fillMaxWidth().height(150.dp).background(color = Color.Yellow),
+            contentAlignment = Alignment.Center) {
+            Column {
