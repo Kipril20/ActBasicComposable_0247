@@ -97,19 +97,21 @@ fun TataletakRowColumn(modifier: Modifier) {
 }
 
 @Composable
-fun TataletakBoxColumnRow(modifier: Modifier) {
-    val gambar = painterResource(id = R.drawable.notasibalok)
-    Column {
+fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
+    // Gunakan R.drawable.ic_launcher_foreground sebagai pengganti sementara
+    // jika file notasibalok (png/jpg) belum ditambahkan ke res/drawable
+    val gambar = painterResource(id = R.drawable.ic_launcher_foreground)
+    Column(modifier = modifier) {
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .fillMaxWidth()
                 .height(110.dp)
                 .background(color = Color.Yellow),
             contentAlignment = Alignment.Center
         ) {
-            Column() {
+            Column {
                 Row(
-                    modifier = modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
                     Text(text = "Col1_Row1_Komponen1")
@@ -117,7 +119,7 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
                     Text(text = "Col1_Row1_Komponen3")
                 }
                 Row(
-                    modifier = modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
                     Text(text = "Col1_Row2_Komponen1")
@@ -126,24 +128,26 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
                 }
             }
         }
-        Spacer(modifier = Modifier.height(height = 10.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .fillMaxWidth()
-                .height(height = 300.dp)
+                .height(300.dp)
                 .background(color = Color.Cyan),
             contentAlignment = Alignment.Center
-        ){
-            Image(painter = gambar,
+        ) {
+            Image(
+                painter = gambar,
                 contentDescription = null,
-                contentScale = ContentScale.Fit)
-            Text(text = "My Music",
+                contentScale = ContentScale.Fit
+            )
+            Text(
+                text = "My Music",
                 fontSize = 50.sp,
                 color = Color.Red,
                 fontWeight = FontWeight.Bold,
                 fontFamily = FontFamily.Cursive,
-                modifier = Modifier.align(
-                    alignment = Alignment.Center)
+                modifier = Modifier.align(Alignment.Center)
             )
         }
     }
