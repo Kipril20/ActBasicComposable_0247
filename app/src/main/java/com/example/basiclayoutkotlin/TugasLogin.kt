@@ -47,5 +47,19 @@ fun TugasLogin(modifier: Modifier = Modifier) {
                 .padding(top = 40.dp, start = 16.dp, end = 16.dp, bottom = 24.dp)
                 .verticalScroll(rememberScrollState())
         ) {
+            // Judul Halaman
+            Text(
+                text = "Login",
+                fontSize = 32.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Red
+            )
+
+            Text(
+                text = "Ini adalah halaman login,",
+                fontSize = 16.sp,
+                color = Color.Black
+            )
+
 
         }}}
