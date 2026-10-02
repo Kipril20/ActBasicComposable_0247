@@ -60,6 +60,6 @@ fun TugasLogin(modifier: Modifier = Modifier) {
                 fontSize = 16.sp,
                 color = Color.Black
             )
-
+            Spacer(modifier = Modifier.height(18.dp))
 
         }}}
