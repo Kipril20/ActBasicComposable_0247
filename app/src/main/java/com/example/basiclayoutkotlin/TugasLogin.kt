@@ -30,4 +30,22 @@ fun TugasLogin(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.TopCenter
-    ) {}}
+    ) {
+        // 1. Gambar Background memenuhi layar
+        Image(
+            painter = painterResource(id = R.drawable.bg_login),
+            contentDescription = "Background",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
+
+        // 2. Konten Teks dan Gambar bertumpuk ke bawah (Column) dan dapat di-scroll
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 40.dp, start = 16.dp, end = 16.dp, bottom = 24.dp)
+                .verticalScroll(rememberScrollState())
+        ) {
+
+        }}}
