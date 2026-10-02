@@ -94,6 +94,15 @@ fun TugasLogin(modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(24.dp))
 
-
-
-        }}}
+            // Gambar Bawah berbentuk Lingkaran (Circle)
+            Image(
+                painter = painterResource(id = R.drawable.foto_profile),
+                contentDescription = "Foto Profil",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(240.dp)
+                    .clip(CircleShape)
+            )
+        }
+    }
+}
