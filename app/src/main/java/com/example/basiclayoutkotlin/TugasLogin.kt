@@ -68,6 +68,6 @@ fun TugasLogin(modifier: Modifier = Modifier) {
                 contentDescription = "Logo",
                 modifier = Modifier.size(285.dp)
             )
-
+            Spacer(modifier = Modifier.height(15.dp))
 
         }}}
