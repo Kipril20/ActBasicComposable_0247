@@ -70,4 +70,20 @@ fun TugasLogin(modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(15.dp))
 
+            // Label & Informasi Mahasiswa
+            Text(
+                text = "Nama",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.DarkGray
+            )
+
+            Text(
+                text = "Rafky Ferdizanto",
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+
+
         }}}
