@@ -79,7 +79,7 @@ fun TugasLogin(modifier: Modifier = Modifier) {
             )
 
             Text(
-                text = "Rafky Ferdizanto",
+                text = "Rafky Ferdiansyah",
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
