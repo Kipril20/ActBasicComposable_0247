@@ -62,4 +62,12 @@ fun TugasLogin(modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(18.dp))
 
+            // Logo Tengah
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = "Logo",
+                modifier = Modifier.size(285.dp)
+            )
+
+
         }}}
